@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-icon">◆</span>
+          <h1>Resume Builder</h1>
+        </div>
+        <p class="tagline">Answer a few questions — get a polished resume.</p>
+      </header>
+
+      <main id="form-view">
+        <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+        <p class="step-indicator" id="step-label"></p>
+
+        <div class="card form-card">
+          <h2 id="step-title"></h2>
+          <p class="step-subtitle" id="step-subtitle"></p>
+          <div id="step-content"></div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" id="btn-back" disabled>Back</button>
+            <button type="button" class="btn-primary" id="btn-next">Continue</button>
+          </div>
+        </div>
+      </main>
+
+      <main id="preview-view" hidden>
+        <div class="preview-toolbar no-print">
+          <button type="button" class="btn-secondary" id="btn-edit">← Edit answers</button>
+          <button type="button" class="btn-primary" id="btn-print">Download PDF</button>
+        </div>
+        <p class="print-hint no-print">
+          Use &quot;Download PDF&quot; then choose <strong>Save as PDF</strong> in the print dialog.
+        </p>
+        <div class="resume-sheet">
+          <article class="resume" id="resume-output"></article>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="app.js"></script>
+    </body>
+</html>
